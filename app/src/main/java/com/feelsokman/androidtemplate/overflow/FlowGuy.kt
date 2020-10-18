@@ -9,7 +9,7 @@ import javax.inject.Inject
 
 class FlowGuy @Inject constructor() {
 
-    var humans = mutableListOf<Human>()
+    private val humans = mutableListOf<Human>()
 
     val someFlow: Flow<List<Human>> = flow {
         for (i in 1..10000) {

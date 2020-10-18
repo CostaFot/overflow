@@ -12,7 +12,7 @@ import androidx.recyclerview.widget.RecyclerView
 import com.feelsokman.androidtemplate.databinding.FragmentHostBinding
 import com.feelsokman.androidtemplate.di.component.AppComponent
 import com.feelsokman.androidtemplate.di.getComponent
-import com.feelsokman.androidtemplate.overflow.AdapterHuman
+import com.feelsokman.androidtemplate.overflow.HumanAdapter
 import com.feelsokman.androidtemplate.ui.base.BaseFragment
 import com.feelsokman.androidtemplate.ui.fragments.host.viewmodel.ViewModelDude
 import com.feelsokman.androidtemplate.utilities.viewmodel.ViewModelFactory
@@ -39,18 +39,18 @@ class FragmentDude : BaseFragment() {
         return binding.root
     }
 
-    lateinit var adapterHuman: AdapterHuman
+    lateinit var humanAdapter: HumanAdapter
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-        adapterHuman = AdapterHuman(emptyList())
+        humanAdapter = HumanAdapter(emptyList())
         recyclerview.layoutManager = LinearLayoutManager(view.context, RecyclerView.VERTICAL, false)
-        recyclerview.adapter = adapterHuman
+        recyclerview.adapter = humanAdapter
 
-        viewModel.humanData.observe(viewLifecycleOwner) {
-            adapterHuman.items = it
-            adapterHuman.notifyDataSetChanged()
+        viewModel.humanData.observe(viewLifecycleOwner) { humans ->
+            humanAdapter.items = humans
+            humanAdapter.notifyDataSetChanged()
         }
 
         button.setOnClickListener {

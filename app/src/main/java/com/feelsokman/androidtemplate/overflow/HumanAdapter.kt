@@ -7,9 +7,9 @@ import androidx.recyclerview.widget.RecyclerView
 import com.feelsokman.androidtemplate.R
 import kotlinx.android.synthetic.main.row.view.*
 
-class AdapterHuman(
+class HumanAdapter(
     var items: List<Human>
-) : RecyclerView.Adapter<AdapterHuman.ItemViewHolder>() {
+) : RecyclerView.Adapter<HumanAdapter.ItemViewHolder>() {
 
     override fun getItemCount(): Int {
         return items.size
