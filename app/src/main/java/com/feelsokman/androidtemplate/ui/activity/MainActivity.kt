@@ -40,7 +40,7 @@ class MainActivity : BaseActivity() {
 
         navController.addOnDestinationChangedListener { _, destination, _ ->
             when (destination.id) {
-                R.id.hostFragment -> logDebug { "hostFragment showing!" }
+                R.id.fragmentDude -> logDebug { "hostFragment showing!" }
                 R.id.anotherFragment -> logDebug { "anotherFragment showing!" }
             }
         }

@@ -11,7 +11,7 @@ import com.feelsokman.androidtemplate.ui.activity.MainActivity
 import com.feelsokman.androidtemplate.ui.activity.di.MainActivityModule
 import com.feelsokman.androidtemplate.ui.fragments.another.AnotherFragment
 import com.feelsokman.androidtemplate.ui.fragments.another.di.AnotherViewModelsModule
-import com.feelsokman.androidtemplate.ui.fragments.host.HostFragment
+import com.feelsokman.androidtemplate.ui.fragments.host.FragmentDude
 import com.feelsokman.androidtemplate.ui.fragments.host.di.HostViewModelsModule
 import dagger.BindsInstance
 import dagger.Component
@@ -34,7 +34,7 @@ interface AppComponent {
 
     fun inject(application: TemplateApplication)
     fun inject(activity: MainActivity)
-    fun inject(hostFragment: HostFragment)
+    fun inject(fragmentDude: FragmentDude)
     fun inject(anotherFragment: AnotherFragment)
 
     @Component.Builder

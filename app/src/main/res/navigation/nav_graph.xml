@@ -2,11 +2,11 @@
 <navigation xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:id="@+id/nav_graph"
-    app:startDestination="@id/hostFragment">
+    app:startDestination="@id/fragmentDude">
 
     <fragment
-        android:id="@+id/hostFragment"
-        android:name="com.feelsokman.androidtemplate.ui.fragments.host.HostFragment"
+        android:id="@+id/fragmentDude"
+        android:name="com.feelsokman.androidtemplate.ui.fragments.host.FragmentDude"
         android:label="HostFragment">
         <action
             android:id="@+id/action_hostFragment_to_anotherFragment"
@@ -14,8 +14,7 @@
             app:enterAnim="@anim/enter_from_left"
             app:exitAnim="@anim/exit_to_right"
             app:popEnterAnim="@anim/enter_from_left"
-            app:popExitAnim="@anim/exit_to_right">
-        </action>
+            app:popExitAnim="@anim/exit_to_right"></action>
     </fragment>
     <fragment
         android:id="@+id/anotherFragment"
